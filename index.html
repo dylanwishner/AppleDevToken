@@ -8,7 +8,7 @@
     <link
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
-      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      integrity="sha38-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
       crossorigin="anonymous"
     />
     <script
@@ -39,43 +39,39 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="style.css" />
-    <title>Apple Devloper Token</title>
+    <title>Apple Developer Token</title>
   </head>
+
   <body>
     <div class="content">
       <div id="header">
-        <img src="assets/title.png" />
+        <h1>Apple Dev Tokens</h1>
       </div>
       <form>
         <div class="form-row">
-          <label for="kid">KID</label>
+          <label for="team_id">Team ID</label>
           <input
-            type="text"
-            class="form-control"
-            id="kid"
-            placeholder="ABCDE12345"
+                  type="text"
+                  class="form-control"
+                  id="team_id"
+                  placeholder="Ex: DEF123GHIJ"
           />
         </div>
         <div class="form-row">
-          <label for="teamID">Team ID</label>
+          <label for="key_id">Key ID</label>
           <input
             type="text"
             class="form-control"
-            id="teamID"
-            placeholder="12345ABCDE"
+            id="key_id"
+            placeholder="Ex: ABC123DEFG"
           />
         </div>
         <div class="form-row">
-          <label for="kid">Secret Key</label>
+          <label for="key_id">Private Key</label>
           <textarea
             class="form-control"
-            id="secret"
-            placeholder="-----BEGIN PRIVATE KEY-----
-g6Mgcq6LQEpHPX5BctZ3DNjPLGinPTlNilpGJPPaSp6iSQmOZhIPVWoFSzY0G25M
-8nXRw5gwuWWG2OhQCQbAh2fQVx1GdczXcZilpwAHHOh2mCykLzEirosflzD0zBn4
-iB6T4IqmYYUrZwkco2l8tDEjt7GJD2upgC9460WrA3Uk5kJnm020OAWHiTHmGP2I
-fbO83pTI
------END PRIVATE KEY-----"
+            id="private_key"
+            placeholder="-----BEGIN PRIVATE KEY-----     KEY     -----END PRIVATE KEY-----"
             rows="6"
           ></textarea>
         </div>
@@ -84,9 +80,9 @@ fbO83pTI
         <div class="alert alert-primary" id="alertDiv">
           Token copied to clipboard.
         </div>
-        <label for="token-out">Your token</label>
+        <label for="token_out">Your token</label>
         <div id="button">
-          <button class="btn btn-primary" type="submit" id="generate">
+          <button class="btn btn-primary" type="submit" id="generate_button">
             Generate Token
           </button>
         </div>
@@ -95,16 +91,16 @@ fbO83pTI
         </div>
         <textarea
           class="form-control"
-          id="token-out"
-          placeholder=""
+          id="token_out"
+          placeholder="Token has not been generated"
           rows="2"
         ></textarea>
       </section>
       <div id="test-token">
-        <label for="test-textarea">Test Token</label>
+        <label for="test_textarea">Test Token</label>
         <button class="btn btn-secondary" id="test-button">Test Token</button>
         <textarea
-          id="test-textarea"
+          id="test_textarea"
           class="form-control"
           rows="2"
           placeholder="Paste your token here to test it with Apple's APIs"
@@ -113,8 +109,7 @@ fbO83pTI
     </div>
 
     <!-- SCRIPTS -->
-    <script src="scripts/copy.js"></script>
-    <script src="scripts/bundle.js"></script>
-    <script src="scripts/tester.js"></script>
+    <script src="bundle.js"></script>
+
   </body>
 </html>

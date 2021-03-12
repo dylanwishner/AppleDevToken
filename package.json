@@ -1,15 +1,16 @@
 {
-  "name": "developer-token",
-  "version": "1.0.0",
-  "description": "Generate developer tokens for Apple using the JWT standard.",
-  "main": "main.js",
+  "name": "apple-developer-token",
+  "version": "1.1.0",
+  "description": "Generate Apple developer account tokens using the JWT standard.",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "browserify app.js -o bundle.js"
   },
   "author": "Dylan Wishner",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "browserify": "^16.5.0",
+    "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1"
   }
 }
